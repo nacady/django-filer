@@ -105,6 +105,7 @@ class AdminFileFormField(forms.ModelChoiceField):
     widget = AdminFileWidget
 
     def __init__(self, rel, queryset, to_field_name, *args, **kwargs):
+        self.max_length = None
         self.rel = rel
         self.queryset = queryset
         self.to_field_name = to_field_name
